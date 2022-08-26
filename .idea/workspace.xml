@@ -26,6 +26,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/florm/PycharmProjects/EjerciciosSemana1-ManuelSuarez"
+  }
+}]]></component>
   <component name="RunManager" selected="Python.Num_Complejos">
     <configuration name="Libreria_Numeros_Complejos (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CNYT" />
