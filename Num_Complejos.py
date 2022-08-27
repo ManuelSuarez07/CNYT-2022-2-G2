@@ -127,6 +127,13 @@ def cart_a_polar(c1):
 def pretty_polar(z):
     print(str(z[0]) + "," + "∠" + str(z[1]) + "°")
 
+def fase_complejo(c1):
+    #Entrega la fase de un numero complejo
+    fase = ((math.atan(c1[1] / c1[0])) * 180) / math.pi
+    return pretty_fase(fase)
+
+def pretty_fase(fase):
+    print("∠" + str(fase) + "°")
 
 
 
