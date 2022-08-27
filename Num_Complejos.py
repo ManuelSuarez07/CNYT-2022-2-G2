@@ -89,5 +89,50 @@ def pretty_div(d):
     elif d[0] == 0 and d[1] == 0:
         print(str(0))
 
+def modulo_complejo(c1):
+    #Entrega el modulo de un numero complejo
+    e = ((c1[0])**2 + (c1[1])**2)**(1/2)
+    return e
+
+def conjugado_complejos(c1):
+    #Entrega el conjugado de un numero complejo
+    conimg = (c1[1]) * (-1)
+    f =  [c1[0], conimg]
+    return pretty_conj(f)
+
+def pretty_conj(f):
+    if f[0] > 0 and f[1] > 0:
+        print(str(f[0]) + "+" + str(f[1]) + "i" )
+    elif f[0] < 0 and f[1] < 0:
+        print(str(f[0]) + str(f[1]) + "i")
+    elif f[0] < 0 and f[1] > 0:
+        print(str(f[0]) + "+" + str(f[1]) + "i" )
+    elif f[0] > 0 and f[1] < 0:
+        print(str(f[0]) + str(f[1]) + "i")
+    elif f[0] == 0 and f[1] != 0:
+        print(str(f[1]) + "i")
+    elif f[1] == 0:
+        print(str(f[0]))
+    elif f[0] == 0 and f[1] == 0:
+        print(str(0))
+
+import math
+def cart_a_polar(c1):
+    # Efectua el cambio de coordenadas cartesianas a polares de un numero complejo, con el uso de math
+    r = ((c1[0])**2 + (c1[1])**2)**(1/2)
+    θ = ((math.atan(c1[1] / c1[0])) * 180) / math.pi
+    z = [r, θ]
+    return pretty_polar(z)
+
+def pretty_polar(z):
+    print(str(z[0]) + "," + "∠" + str(z[1]) + "°")
+
+
+
+
+
+
+
+
 
 
