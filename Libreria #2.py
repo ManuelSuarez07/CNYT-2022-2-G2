@@ -118,10 +118,11 @@ def transpuesta_matcom_veccom(mv1):
     # Funcion que retorna la transpues de una matriz compleja o un vector complejo.
     a = np.array(mv1)
     f, c = a.shape
+    trasp = [[0 for i in range(len(mv1))] for j in range(len(mv1[0]))]
     for i in range(f):
         for j in range(c):
-            mv1[i][j] = mv1[j][i]
-    return mv1
+            trasp[i][j] = mv1[j][i]
+    return trasp
 
 # Ejemplo, obtener la traspuesta de la matriz compleja [[2+3i, 4+5i],[2+5i, 8+7i]].
 #print(transpuesta_matcom_veccom([[2+3j, 4+5j],[2+5j, 8+7j]]))
@@ -144,10 +145,11 @@ def daga_matcom_veccom(mv1):
     for i in range(f):
         for j in range(c):
             mv1[i][j] = np.conj(mv1[i][j])
+    daga = [[0 for i in range(len(mv1))] for j in range(len(mv1[0]))]
     for i in range(f):
         for j in range(c):
-            mv1[i][j] = mv1[j][i]
-    return mv1
+            daga[i][j] = mv1[j][i]
+    return daga
 # Ejemplo, obtener la adjunta de la matriz compleja [[2+3i, 4+5i],[2+5i, 8+7i]].
 #print(daga_matcom_veccom([[2+3j, 4+5j],[2+5j, 8+7j]]))
 
@@ -223,9 +225,28 @@ def dist_dos_vec(v1, v2):
 
 def matriz_unitaria(m1):
     return 0
+
 def matriz_hermitiana(m1):
-    return 0
-def prod_tensor_matrices(m1, m2):
-    return 0
-def prod_tensor_vectores(v1, v2):
-    return 0
+    # Funcion que comprueba si una matriz es hermitiana.
+    a = np.array(m1)
+    f, c = a.shape
+    if f != c:
+        return "La matriz no es hermitiana"
+    trasnp = transpuesta_matcom_veccom(m1)
+    conj = conjugado_matcom_veccom(trasnp)
+    if conj == m1:
+        return "Es hermitiana"
+    elif conj != m1:
+        return "La matriz no es hermitiana"
+
+# Ejemplo, Comprobar si la matriz [[5, 4+5i, 6-16i],[4-5i, 13, 7],[6+16i, 7, -2.1]] es hermitiana.
+#print(matriz_hermitiana([[5, 4+5j, 6-16j],[4-5j, 13, 7],[6+16j, 7, -2.1]]))
+
+def prod_tensor(mv1, mv2):
+    # Funcion que retorna el producto tensor entre dos matrices o vectores.
+    a = np.array(mv1)
+    b = np.array(mv2)
+    return np.kron(a,b)
+
+# Ejemplo, Calcular el producto tensor entre [[2i],[1+6i]] y [[-5],[3+4i],[-2.1]]
+#print(prod_tensor([[2j],[1+6j]],[[-5],[3+4j],[-2.1]]))
