@@ -29,3 +29,10 @@
 ### 15. Revisar si una matriz es unitaria (No esta).
 ### 16. Revisar si una matriz es hermitiana.
 ### 17. Producto tensor de dos matrices/vectores.
+
+## Libreria 3:
+### Libreria que contiene las siguientes funciones:
+### 1. Experimento de la canica con coeficiente booleanos.
+### 2. Experimento de la multiples rendijas clasico probabilistico, con mas de dos rendijas.
+### 3. Experimento de las multiples rendijas cuantico.
+### 4. Funcion que grafica un diagrama de barras que muestra las probabilidades de un vector de estados y guarda la imagen en el comutador como png.
