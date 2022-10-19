@@ -25,5 +25,7 @@ En la actualidad este experimento se considera en la física cuántica para demo
 https://drive.google.com/file/d/1nbzHld2f1_rUr59soKD6sWtFYpL0xE_q/view?usp=sharing
 ### Link GitHub Manuel Suarez:
 https://github.com/ManuelSuarez07/CNYT-2022-2-G2.git
+### Link GitHub Yeltzyn Sierra:
+https://github.com/YeltzynS/YeltzynS
 
 ### Documento Python en GitHub.
