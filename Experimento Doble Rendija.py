@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plot
-def canicas(m, v, c):
+def Doble_Rendija(m, v, c):
     # Funcion que efectua el experimento de la doble rendija.
     # m = Matriz dada, v = Vector, c = Numero de clicks.
     m = np.array(m)
